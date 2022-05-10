@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="icon/png" href="favicon.png">
+	<title>Pollution Awareness</title>
+</head>
+
+<body>
+<section class="first">
+
+								<!--LANDING PAGE-->
+
+<!--Resources-->
+	<div class="bannerVideo" id="slideShow">
+		<video src="D:\HTML\Website Pollution\Videos\video1.mp4" autoplay muted loop class="active" type="video/mp4"></video>
+		<video src="D:\HTML\Website Pollution\Videos\video2.mp4" autoplay muted loop></video>
+		<video src="D:\HTML\Website Pollution\Videos\video3.mp4" autoplay muted loop></video>
+		<!--<video src="video4.mp4" autoplay muted loop></video>-->
+	</div>
+
+<!-- Navbar -->
+	<div class="container">
+		<header id="navbar">
+			<a href="#" class="logo">Pollution</a>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<!--<li><a href="#">Newsroom</a></li>
+				<li><a href="#" >Events</a></li>-->
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#aboutus">Contact Us</a></li>
+				<li><a href="login.html">Log In / Sign Up</a></li>
+			</ul>
+			<span class="menuIcon" onclick="toggleMenu();"></span>
+		</header>
+
+<!--Video Intro-->
+		<div class="content">
+			<div class="bannerText" id="slideShowText">
+				<div class="active">
+					<h2>Air Pollution</h2>
+					<p>Air pollution is the contamination of air due to the presence of substances in the atmosphere that are harmful to the health of humans and other living beings, or cause damage to the climate or to materials. It can also cause harm to food crops, and may damage the natural environment (for example, climate change, ozone depletion or habitat degradation).</p>
+					<a href="#air" class="readmore">Read More</a>
+				</div>
+				<div>
+					<h2>Water Pollution</h2>
+					<p>Water pollution (or aquatic pollution) is the contamination of water bodies, usually as a result of human activities, in such a manner that negatively affects its legitimate uses. Water pollution reduces the ability of the body of water to provide the ecosystem services that it would otherwise provide.</p>
+					<a href="#water" class="readmore">Read More</a>
+				</div>
+				<div>
+					<h2>Land Pollution</h2>
+					<p>Soil contamination, soil pollution, or land pollution as a part of land degradation is caused by the presence of human-made chemicals or other alteration in the natural soil environment. It is typically caused by industrial activity, agricultural chemicals or improper disposal of waste.</p>
+					<a href="#land" class="readmore">Read More</a>
+				</div>
+				<!--<div>
+					<h2>Sound</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>-->
+			</div>
+		</div>
+
+<!--Sticky Socials-->
+		<!--<ul class="sci">
+			<li><a href="#"><img src="facebook1.png"></a></li>
+			<li><a href="#"><img src="insta.png"></a></li>
+			<li><a href="#"><img src="twitter1.png"></a></li>
+		</ul>-->
+
+<!--Arrows-->
+		<ul class="controls">
+			<li onclick="prevSlide();prevSlideText();"><img src="left.png"></li>
+			<li onclick="nextSlide();nextSlideText();"><img src="right.png"></li>
+		</ul>
+	</div>
+</section>
+
+<!--Arrow Controls-->
+<script type="text/javascript">
+	const slideShow = document.getElementById('slideShow');
+	const slides = slideShow.getElementsByTagName('video');
+	var index = 0;
+	function nextSlide(){
+		slides[index].classList.remove('active');
+		index = (index + 1) % slides.length;
+		slides[index].classList.add('active');
+	}
+	function prevSlide(){
+		slides[index].classList.remove('active');
+		index = (index - 1 + slides.length) % slides.length;
+		slides[index].classList.add('active');
+	}
+
+
+    const slideShowText = document.getElementById('slideShowText');
+	const slidesText = slideShowText.getElementsByTagName('div');
+	var i = 0;
+	function nextSlideText(){
+		slidesText[i].classList.remove('active');
+		i = (i + 1) % slidesText.length;
+		slidesText[i].classList.add('active');
+	}
+	function prevSlideText(){
+		slidesText[i].classList.remove('active');
+		i = (i - 1 + slidesText.length) % slidesText.length;
+		slidesText[i].classList.add('active');
+	}
+	function toggleMenu(){
+		const menuIcon = document.querySelector('.menuIcon');
+		const navbar = document.getElementById('navbar');
+		menuIcon.classList.toggle('active');
+		navbar.classList.toggle('active');
+	}
+</script>
+
+								<!--AIR PAGE-->
+<section class="second">
+	<div class="air">
+		<a name = "air" class="air"><h1>Air Pollution</h1></a>
+		<p class="desca">Air pollution refers to the release of pollutants into the air—pollutants which are detrimental to human health and the planet as a whole.  Nine out of ten human beings currently breathe air that exceeds the WHO’s guideline limits for pollutants, with those living in low- and middle-income countries suffering the most.</p>
+		<div class="totalair">
+			<div class="prosair">
+				<h3>Causes</h3>
+				<p>Household combustion devices, motor vehicles, industrial facilities and forest fires are common sources of air pollution. Pollutants of major public health concern include particulate matter, carbon monoxide, ozone, nitrogen dioxide and sulfur dioxide. Another type of air pollution, smog, is then worsened by that increased heat, forming when the weather is warmer and there is more ultraviolet radiation. Fumes from paint, hair spray, varnish, aerosol sprays and other solvents. Aviation is also one of the major sources of air pollution.</p>
+			</div>
+
+			<div class="prosair">
+				<h3>Preventions</h3>
+				<p>The less gasoline we burn, the better we are doing to reduce air pollution and harmful effects of climate change. Make good choices about transportation. When you can, walk, ride a bike, or take public transportation. For driving, choose a car that gets better miles per gallon of gas, or choose an electric car. You can also investigate your power provider options—you may be able to request that your electricity be supplied by wind or solar. Buying your food locally cuts down on the fossil fuels burned in trucking or flying food in from across the country.</p>
+			</div>
+
+			<div class="prosair">
+				<h3>Facts</h3>
+				<p>Air pollution is a significant risk factor for a number of pollution-related diseases, including respiratory infections, heart disease, COPD, stroke and lung cancer. Outdoor air pollution alone causes 2.1 to 4.21 million deaths annually, making it one of the top contributors to human death
+				   Data shows that almost all of the global population (99%) breathe air that exceeds WHO guideline limits and contains high levels of pollutants, with low- and middle-income countries suffering from the highest exposures</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+								<!--WATER PAGE-->
+<section class="third">
+		<div class="water">
+				<a name = "water" class="water"><h1>Water Pollution</h1></a>
+				<p class="descw">Water pollution occurs when harmful substances—often chemicals or microorganisms—contaminate a stream, river, lake, ocean, aquifer, or other body of water, degrading water quality and rendering it toxic to humans or the environment.</p>
+				<div class="totalwater">
+					<div class="proswater">
+						<h3>Causes</h3>
+						<p>Water is uniquely vulnerable to pollution. Known as a “universal solvent,” water is able to dissolve more substances than any other liquid on earth. Water pollution can usually be attributed to one of four sources: sewage, industry, agriculture, and urban runoff including stormwater. For example, releasing inadequately treated wastewater into natural waters can lead to degradation of these aquatic ecosystems. Water pollution can also lead to water-borne diseases for people using polluted water for drinking, bathing, washing or irrigation.</p>
+					</div>
+								
+					<div class="proswater">
+						<h3>Preventions</h3>
+						<p>Reduce your plastic consumption and reuse or recycle plastic when you can.
+							Properly dispose of chemical cleaners, oils, and nonbiodegradable items to keep them from going down the drain.
+							Maintain your car so it does not leak oil, antifreeze, or coolant. Be mindful of anything you pour into storm sewers, since that waste often won’t be treated before being released into local waterways. If you notice a storm sewer blocked by litter, clean it up to keep that trash out of the water.
+							Don't put fertilizer on the grass right before it rains. The chemicals will wash into storm drains and waterways.
+						</p>
+					</div>
+								
+					<div class="proswater">
+						<h3>Facts</h3>
+						<p>Approximately 785 million people in the world do not have access to clean drinking water because of pollution. Around 70% of the industrial waste is dumped into the water bodies where they pollute the usable water supply. Industry dumps an estimated 300-400 MT of polluted waste into water bodies every year. It includes millions of tonnes of heavy metals, solvents, toxic sludge and other wastes. Fourteen billion pounds of garbage, mostly plastic, is dumped into the ocean every year. 15 million children under the age of five die each year because of diseases caused by drinking water</p>
+					</div>		
+				</div>
+		</div>
+</section>
+
+										<!--LAND PAGE-->
+<section class="fourth">
+	<div class="land">
+		<a name = "land" class="land"><h1>Land Pollution</h1></a>
+		<p class="desc">Land pollution refers to the deterioration of the earth’s land surfaces, at and below ground level. The cause is the accumulation of solid and liquid waste materials that contaminate groundwater and soil.</p>
+			<div class="totalland">
+				<div class="prosland">
+					<h3>Causes</h3>
+					<p>The most common chemicals involved are petroleum hydrocarbons, polynuclear aromatic hydrocarbons (such as naphthalene and benzo(a)pyrene), solvents, pesticides, lead, and other heavy metals. Contamination is correlated with the degree of industrialization and intensity of chemical substance.  These compounds are mainly formed through soil microbial activity and decomposition of organisms. Additionally, various compounds get into the soil from the atmosphere, e.g with precipitation water, as well as by wind activity or other types of soil disturbances.</p>
+				</div>
+
+				<div class="prosland">
+					<h3>Preventions</h3>
+					<p>Reducing pesticides and chemical fertilizer usage can help in the prevention of land pollution. In addition to contaminating the soil, they do no good for the crops.
+
+						Also, instead of harmful toxins, farmers must use natural ingredients. They can switch to bio-fertilizers and manure. This will help to minimize land pollution. All of us must practice reforestation to protect the land from occurring pollution. Further, it will prevent us from floods and soil erosion. We must also practice "Reduce, Reuse and Recycle" in our day to day lives to make this world a better place.</p>
+				</div>
+
+				<div class="prosland">
+					<h3>Facts</h3>
+					<p>Energy production and food waste are the reason for about 80% of the land pollution.
+						80% of the items on the landfills are recyclable.
+						The planet loses 24 billion tonnes of topsoil each year because of land pollution.
+						Agricultural activities are the reason for a significant percent of the land pollution. That would be anything related to fertilizing, using pesticides, irrigation and improper disposal of animal waste.
+						Half of the population is drinking water that is unsafe that has been contaminated by environmental pollution of the land.
+					</p>
+				</div>
+			
+			</div>
+	</div>
+</section>
+
+<!--FOOTER-->
+<section class="footer">
+	<a name="aboutus" class="aboutus"></a>
+		<h4>About Us</h4>
+		<p>We are students of Manav Rachna Internation School, <br> trying to spread awareness in the world about the rising pollution.</p>
+		<br>
+		<p>Contact Us ↓</p>
+		<p>shiven.chakraborty@gmail.com</p>
+		<p>nakraraghav38@gmail.com</p>
+		<br>
+		<p>Made by Shiven Chakraborty & Raghav Nakra</p>
+	</section>
+
+</body>
+</html>
